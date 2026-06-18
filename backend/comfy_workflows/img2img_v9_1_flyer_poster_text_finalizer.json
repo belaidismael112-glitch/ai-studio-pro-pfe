@@ -1,0 +1,125 @@
+{
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "__CHECKPOINT__"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        1
+      ],
+      "text": "__POSITIVE_PROMPT__"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "3",
+        1
+      ],
+      "text": "__NEGATIVE_PROMPT__"
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "__INPUT_IMAGE__"
+    }
+  },
+  "7": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": "__SEED__",
+      "steps": "__STEPS__",
+      "cfg": "__CFG__",
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": "__DENOISE__",
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "__SAVE_PREFIX__",
+      "images": [
+        "12",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": "__WIDTH__",
+      "height": "__HEIGHT__",
+      "crop": "center"
+    }
+  },
+  "12": {
+    "class_type": "AIStudioTextFinalizerV91",
+    "inputs": {
+      "image": [
+        "9",
+        0
+      ],
+      "headline": "__HEADLINE__",
+      "subheadline": "__SUBHEADLINE__",
+      "cta": "__CTA__",
+      "bullet_1": "__BULLET_1__",
+      "bullet_2": "__BULLET_2__",
+      "bullet_3": "__BULLET_3__"
+    }
+  }
+}

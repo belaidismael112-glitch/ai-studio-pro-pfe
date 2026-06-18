@@ -1,0 +1,43 @@
+name: Production Docker Build Check
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'backend/**'
+      - 'webapp/**'
+      - 'docker-compose.prod.yml'
+      - '.github/workflows/prod-build-ci.yml'
+
+jobs:
+  prod-build-check:
+    name: Build production Dockerfiles
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend production image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend
+          file: ./backend/Dockerfile.prod
+          push: false
+          tags: ai-studio-pro-backend:prod-ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build webapp production image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./webapp
+          file: ./webapp/Dockerfile.prod
+          push: false
+          tags: ai-studio-pro-webapp:prod-ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

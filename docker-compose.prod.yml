@@ -1,0 +1,71 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: ai_studio_redis_prod
+    restart: unless-stopped
+    volumes:
+      - redis_data_prod:/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    image: ai_studio_pro_backend_prod:latest
+    container_name: ai_studio_backend_prod
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      COMFY_URL: ${COMFY_URL:-http://host.docker.internal:8188}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      DATABASE_URL: sqlite:///./ai_studio.db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    expose:
+      - "8000"
+    volumes:
+      - backend_static_prod:/app/static
+      - backend_tmp_prod:/app/tmp
+      - backend_db_prod:/app/data
+    depends_on:
+      - redis
+
+  webapp:
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile.prod
+    image: ai_studio_pro_webapp_prod:latest
+    container_name: ai_studio_webapp_prod
+    restart: unless-stopped
+    env_file:
+      - ./webapp/.env
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost/api}
+      NEXT_PUBLIC_BACKEND_URL: ${NEXT_PUBLIC_BACKEND_URL:-http://localhost/api}
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: ai_studio_nginx_prod
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - webapp
+      - backend
+
+volumes:
+  redis_data_prod:
+  backend_static_prod:
+  backend_tmp_prod:
+  backend_db_prod:

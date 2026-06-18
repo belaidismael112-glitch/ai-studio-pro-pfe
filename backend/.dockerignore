@@ -1,0 +1,83 @@
+# Python/cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets/env
+.env
+.env.*
+!.env.example
+
+# Local virtualenvs and local installs
+venv/
+.venv/
+env/
+ENV/
+venv_comfy/
+
+# Heavy local AI/model/runtime folders - keep ComfyUI/Ollama outside Docker in Stage 1
+ComfyUI-master/
+ComfyUI/
+comfyui/
+models/
+checkpoints/
+ollama/
+.cache/
+.cache*/
+
+# Generated/runtime files
+logs/
+tmp/
+temp/
+static/
+uploads/
+outputs/
+generated/
+patch_files/
+_disabled_old_text_backups/
+
+# Local DB/backups
+ai_studio.db
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+
+# Old patches/backups/archives
+_v*/
+_final_v*/
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.bat
+VERIFY_*
+INSTALL_*
+RUN_*
+Nouveau Document texte.txt
+
+# Git/node/build junk
+.git/
+.github/
+.gitignore
+node_modules/
+.next/
+dist/
+build/
+
+# Misc large/media
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.avi
+*.png
+*.jpg
+*.jpeg
+*.webp

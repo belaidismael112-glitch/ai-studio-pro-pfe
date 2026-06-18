@@ -1,0 +1,3 @@
+from __future__ import annotations
+
+V11_SHARED_DESIGN_LAYER_MARKER = "AI_STUDIO_V11_SHARED_DESIGN_LAYER_5_MODES"

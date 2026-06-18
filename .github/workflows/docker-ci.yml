@@ -1,0 +1,39 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  docker-build:
+    name: Build Docker images
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend
+          file: ./backend/Dockerfile
+          push: false
+          tags: ai-studio-pro-backend:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build webapp image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./webapp
+          file: ./webapp/Dockerfile
+          push: false
+          tags: ai-studio-pro-webapp:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

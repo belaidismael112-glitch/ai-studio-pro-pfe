@@ -1,0 +1,145 @@
+# AI Studio Pro - safe Git ignore
+# Keep code/config examples, ignore secrets, caches, builds, local AI runtimes, datasets and backups.
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+!.env.docker.example
+!.env.prod.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+webapp/.env
+webapp/.env.*
+!webapp/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/venv_comfy/
+webapp/venv/
+webapp/venv_comfy/
+
+# Node / Next
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.cache/
+webapp/node_modules/
+webapp/.next/
+webapp/out/
+webapp/dist/
+webapp/build/
+
+# Docker/runtime generated data
+backend/static/
+backend/tmp/
+backend/logs/
+static/
+logs/
+tmp/
+temp/
+uploads/
+outputs/
+generated/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Local AI runtimes / models / heavy folders
+backend/ComfyUI-master/
+backend/ComfyUI/
+backend/comfyui/
+backend/models/
+backend/checkpoints/
+backend/vendor/
+backend/tools/
+ComfyUI/
+comfyui/
+models/
+checkpoints/
+ollama/
+
+# Backup/version folders created during local patching
+_backup*/
+_final*/
+_v*/
+backend/_backup*/
+backend/_final*/
+backend/_v*/
+backend/_disabled_old_text_backups/
+webapp/_backup*/
+webapp/_final*/
+webapp/_v*/
+
+# Archives and copied source snapshots
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+backend/app*.zip
+backend/comfy_workflows*.zip
+webapp/src*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Reports/datasets that can be large
+rapport_pfe/
+*.csv
+!demo_generation_dataset.csv
+
+# Legacy patch/install artifacts
+backend/INSTALL_*.bat
+backend/VERIFY_*.bat
+backend/RUN_*.bat
+backend/README_V*.md
+backend/*PATCH*.bat
+backend/*HOTFIX*.bat
+backend/*FIX*.bat
+03_ENV_ADD_ONLY_DO_NOT_OVERWRITE.env
+
+# Generated backup / patch leftovers
+backend/**/*.bak
+backend/**/*.backup
+backend/**/*_backup
+backend/**/*backup
+backend/**/*.before_*
+backend/**/*.bad_*
+backend/patch_files/
+backend/fix_v*.ps1
+
+# Old top-level generated/backup folders
+_final_v20_safe/
+_v21/
+_v22/
+_v23/
+_v24/
+_v25/
+_backup_before_*/
+frontend/

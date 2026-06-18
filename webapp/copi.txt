@@ -1,0 +1,110 @@
+# AI Studio Pro - Backend Configuration
+
+# Application
+DEBUG=true
+SECRET_KEY=feb45e00c8d39fb7203fad2060cc843ede2ca778fd33cee2fdc2787e9815146d1ad9f8da83261042aba88141389e620ccf885a281733402d468478af87f5cc48
+HOST=0.0.0.0
+PORT=8000
+
+# Database
+DATABASE_URL=sqlite:///./ai_studio.db
+# For PostgreSQL:
+# DATABASE_URL=postgresql+asyncpg://user:password@localhost:5432/ai_studio
+AI_PROVIDER=comfy
+COMFY_URL=http://127.0.0.1:8188
+COMFY_CHECKPOINT=v1-5-pruned-emaonly.safetensors
+COMFY_MOTION_MODEL=mm_sd_v15_v2.ckpt
+BACKEND_PUBLIC_URL=http://localhost:8000
+
+# _PROVIDER=stability
+STABILITY_API_KEY=sk-oiGdTyEuQCALAH88RL8LzyD657yqRDklWRr4rhTKUFCcXe4l
+STABILITY_BASE_URL=https://api.stability.ai
+# JWT
+JWT_SECRET_KEY=feb45e00c8d39fb7203fad2060cc843ede2ca778fd33cee2fdc2787e9815146d1ad9f8da83261042aba88141389e620ccf885a281733402d468478af87f5cc48
+JWT_ALGORITHM=HS256
+JWT_ISSUER=ai-studio-pro
+JWT_AUDIENCE=ai-studio-pro
+JWT_LEEWAY_SECONDS=30
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+REFRESH_TOKEN_EXPIRE_DAYS=7
+
+# CORS
+CORS_ORIGINS=["http://localhost:3000", "http://localhost:5173"]
+
+# Stripe
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+STRIPE_PRICE_STARTER=price_...
+STRIPE_PRICE_PRO=price_...
+STRIPE_PRICE_ENTERPRISE=price_...
+
+# AI APIs
+REPLICATE_API_TOKEN=r8_UKfOo9JX3fPeg0mshp1VMYTNFzt4VM51aRg14
+RUNWAY_API_KEY=...
+FAL_KEY=...
+
+# Object Storage (S3/R2/MinIO) - optional
+# For Cloudflare R2, set S3_ENDPOINT_URL to your R2 endpoint.
+#S3_ENDPOINT_URL=
+#S3_ACCESS_KEY_ID=...
+#S3_SECRET_ACCESS_KEY=...
+#S3_BUCKET_NAME=ai-studio-pro
+#S3_REGION=us-east-1
+#SIGNED_URL_EXPIRE_SECONDS=3600
+ASSISTANT_PROVIDER=ollama
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_MODEL=qwen2.5:3b-instruct
+
+PIPER_ENABLED=true
+PIPER_EXE=tools/piper/piper.exe
+PIPER_VOICE=tools/piper/voices/fr_FR-siwis-medium.onnx
+PIPER_VOICE_FR=tools/piper/voices/fr_FR-siwis-medium.onnx
+#PIPER_VOICE_AR=tools/piper/voices/ar_JO-kareem-medium.onnx
+PIPER_VOICE_EN=tools/piper/voices/en_US-lessac-medium.onnx
+#PIPER_VOICE_TN=tools/piper/voices/ar_JO-kareem-medium.onnx
+PIPER_VOICE_AR=tools/piper/voices/arabic-emirati-female-model.onnx
+PIPER_VOICE_TN=tools/piper/voices/arabic-emirati-female-model.onnx
+PIPER_AUDIO_DIR=static/assistant_audio
+BACKEND_PUBLIC_URL=http://127.0.0.1:8000
+
+
+
+# Redis / Celery
+REDIS_URL=redis://localhost:6379/0
+CELERY_TASK_ALWAYS_EAGER=false
+
+# Desktop updates
+LATEST_DESKTOP_VERSION=1.0.0
+DESKTOP_UPDATE_URL=
+
+# Credit costs
+CREDIT_COST_IMAGE=10
+CREDIT_COST_VIDEO=50
+FREE_TRIAL_CREDITS=100
+
+# Security headers (recommended true in production)
+ENABLE_SECURITY_HEADERS=true
+
+# Upload safety
+MAX_UPLOAD_MB=15
+
+ASSISTANT_PROVIDER=ollama
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_MODEL=qwen2.5:3b-instruct
+OPERATOR_USE_OLLAMA=true
+
+INITIAL_ADMIN_EMAIL=admin@aistudio.com
+INITIAL_ADMIN_PASSWORD=Admin123456/ChangeMeAdmin123!
+INITIAL_ADMIN_FULL_NAME=Main Admin
+
+INITIAL_ADMIN_EMAIL_2=owner@aistudio.com
+INITIAL_ADMIN_PASSWORD_2=Owner123456
+INITIAL_ADMIN_FULL_NAME_2=Owner Admin
+
+# Magic Lens
+MAGIC_LENS_MAX_UPLOAD_MB=8
+OLLAMA_VISION_ENABLED=true
+OLLAMA_VISION_MODEL=moondream
+DIRECTOR_MODE_USE_OLLAMA=true
+BRAND_STUDIO_USE_OLLAMA=true
+AUDIENCE_MIRROR_USE_OLLAMA=false

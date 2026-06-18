@@ -1,0 +1,8 @@
+torch>=2.0.0
+numpy
+opencv-python>=4.5.4
+scipy>=0.17.0
+scikit-image
+numba
+packaging
+tqdm
