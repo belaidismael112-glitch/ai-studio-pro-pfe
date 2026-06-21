@@ -1,23 +1,23 @@
-# AI Studio Pro
+﻿# AI Studio Pro
 
 <p align="center">
-  <img src="assets/banner.png" alt="AI Studio Pro" width="900" />
+  <img src="assets/studio-pro-workspace-logo-master.png" alt="Studio Pro Workspace" width="720">
 </p>
 
-## Application Professionnelle de Génération d'Images et Vidéos par Intelligence Artificielle
+## Application Professionnelle de GÃ©nÃ©ration d'Images et VidÃ©os par Intelligence Artificielle
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Python](https://img.shields.io/badge/python-3.11-green)
-![Node](https://img.shields.io/badge/node-18+-green)
-![License](https://img.shields.io/badge/license-MIT-orange)
+![Studio Pro Workspace](assets/studio-pro-workspace-logo-master.png)
+![Studio Pro Workspace](assets/studio-pro-workspace-logo-master.png)
+![Studio Pro Workspace](assets/studio-pro-workspace-logo-master.png)
+![Studio Pro Workspace](assets/studio-pro-workspace-logo-master.png)
 
 ---
 
-## 📋 Table des matières
+## ðŸ“‹ Table des matiÃ¨res
 
-- [Présentation](#présentation)
+- [PrÃ©sentation](#prÃ©sentation)
 - [Architecture](#architecture)
-- [Fonctionnalités](#fonctionnalités)
+- [FonctionnalitÃ©s](#fonctionnalitÃ©s)
 - [Installation](#installation)
 - [Structure du projet](#structure-du-projet)
 - [Technologies](#technologies)
@@ -26,117 +26,117 @@
 
 ---
 
-## 🎯 Présentation
+## ðŸŽ¯ PrÃ©sentation
 
-**AI Studio Pro** est une plateforme professionnelle permettant la génération d'images et de vidéos par intelligence artificielle. L'application est accessible via :
+**AI Studio Pro** est une plateforme professionnelle permettant la gÃ©nÃ©ration d'images et de vidÃ©os par intelligence artificielle. L'application est accessible via :
 
-- ✅ **Application Desktop Windows** (PySide6/Qt)
-- ✅ **Application Web** (React/Next.js)
-- ✅ **API REST** (FastAPI)
+- âœ… **Application Desktop Windows** (PySide6/Qt)
+- âœ… **Application Web** (React/Next.js)
+- âœ… **API REST** (FastAPI)
 
-Le système utilise des modèles AI cloud (Stable Diffusion, Runway) pour garantir des performances optimales sans nécessiter de matériel puissant côté client.
-
----
-
-## 🏗️ Architecture
-
-<p align="center">
-  <img src="assets/architecture.png" alt="Architecture" width="900" />
-</p>
-
-## 🖥️ Aperçu (Screenshots)
-
-<p align="center">
-  <img src="assets/screenshots/01_dashboard.png" width="900" />
-  <br/>
-  <img src="assets/screenshots/02_generate.png" width="900" />
-  <br/>
-  <img src="assets/screenshots/03_billing.png" width="900" />
-</p>
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        AI Studio Pro                             │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ┌──────────────┐      ┌──────────────┐      ┌──────────────┐  │
-│  │   Desktop    │      │     Web      │      │  Mobile App  │  │
-│  │  (PySide6)   │      │  (React)     │      │   (Future)   │  │
-│  └──────┬───────┘      └──────┬───────┘      └──────────────┘  │
-│         │                      │                                 │
-│         └──────────┬───────────┘                                 │
-│                    │                                             │
-│         ┌──────────▼───────────┐                                 │
-│         │   API Gateway        │                                 │
-│         │   (FastAPI)          │                                 │
-│         └──────────┬───────────┘                                 │
-│                    │                                             │
-│    ┌───────────────┼───────────────┐                            │
-│    │               │               │                            │
-│ ┌──▼───┐     ┌────▼────┐    ┌─────▼─────┐                      │
-│ │Auth  │     │ Credits │    │Generation │                      │
-│ │JWT   │     │ System  │    │  Service  │                      │
-│ └──┬───┘     └────┬────┘    └─────┬─────┘                      │
-│    │                                   │                         │
-│    └──────────────┼───────────────────┘                         │
-│                   │                                              │
-│         ┌─────────▼──────────┐                                   │
-│         │  PostgreSQL + S3   │                                   │
-│         └────────────────────┘                                   │
-│                                                                  │
-│         ┌────────────────────┐                                   │
-│         │  AI Services       │                                   │
-│         │  (Replicate/Runway)│                                   │
-│         └────────────────────┘                                   │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+Le systÃ¨me utilise des modÃ¨les AI cloud (Stable Diffusion, Runway) pour garantir des performances optimales sans nÃ©cessiter de matÃ©riel puissant cÃ´tÃ© client.
 
 ---
 
-## ✨ Fonctionnalités
+## ðŸ—ï¸ Architecture
 
-### 🖼️ Génération d'Images
-- Prompts textuels avec styles prédéfinis
-- Résolutions multiples (512x512 à 1920x1080)
-- Negative prompts pour un meilleur contrôle
-- Historique complet des générations
+<p align="center">
+  <img src="assets/studio-pro-workspace-logo-master.png" alt="Studio Pro Workspace" width="720">
+</p>
 
-### 🎬 Génération de Vidéos
-- Transformation de texte en vidéo
-- Durées configurables (2-16 secondes)
-- Résolutions HD disponibles
+## ðŸ–¥ï¸ AperÃ§u (Screenshots)
+
+<p align="center">
+  <img src="assets/studio-pro-workspace-logo-master.png" alt="Studio Pro Workspace" width="720">
+  <br/>
+  <img src="assets/studio-pro-workspace-logo-master.png" alt="Studio Pro Workspace" width="720">
+  <br/>
+  <img src="assets/studio-pro-workspace-logo-master.png" alt="Studio Pro Workspace" width="720">
+</p>
+
+```
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                        AI Studio Pro                             â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚                                                                  â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚   Desktop    â”‚      â”‚     Web      â”‚      â”‚  Mobile App  â”‚  â”‚
+â”‚  â”‚  (PySide6)   â”‚      â”‚  (React)     â”‚      â”‚   (Future)   â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚         â”‚                      â”‚                                 â”‚
+â”‚         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                                 â”‚
+â”‚                    â”‚                                             â”‚
+â”‚         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                                 â”‚
+â”‚         â”‚   API Gateway        â”‚                                 â”‚
+â”‚         â”‚   (FastAPI)          â”‚                                 â”‚
+â”‚         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                                 â”‚
+â”‚                    â”‚                                             â”‚
+â”‚    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                            â”‚
+â”‚    â”‚               â”‚               â”‚                            â”‚
+â”‚ â”Œâ”€â”€â–¼â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â–¼â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”                      â”‚
+â”‚ â”‚Auth  â”‚     â”‚ Credits â”‚    â”‚Generation â”‚                      â”‚
+â”‚ â”‚JWT   â”‚     â”‚ System  â”‚    â”‚  Service  â”‚                      â”‚
+â”‚ â””â”€â”€â”¬â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”˜                      â”‚
+â”‚    â”‚                                   â”‚                         â”‚
+â”‚    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                         â”‚
+â”‚                   â”‚                                              â”‚
+â”‚         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                                   â”‚
+â”‚         â”‚  PostgreSQL + S3   â”‚                                   â”‚
+â”‚         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                                   â”‚
+â”‚                                                                  â”‚
+â”‚         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                                   â”‚
+â”‚         â”‚  AI Services       â”‚                                   â”‚
+â”‚         â”‚  (Replicate/Runway)â”‚                                   â”‚
+â”‚         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                                   â”‚
+â”‚                                                                  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+```
+
+---
+
+## âœ¨ FonctionnalitÃ©s
+
+### ðŸ–¼ï¸ GÃ©nÃ©ration d'Images
+- Prompts textuels avec styles prÃ©dÃ©finis
+- RÃ©solutions multiples (512x512 Ã  1920x1080)
+- Negative prompts pour un meilleur contrÃ´le
+- Historique complet des gÃ©nÃ©rations
+
+### ðŸŽ¬ GÃ©nÃ©ration de VidÃ©os
+- Transformation de texte en vidÃ©o
+- DurÃ©es configurables (2-16 secondes)
+- RÃ©solutions HD disponibles
 - Export au format MP4
 
-### 💎 Système de Crédits
-- Crédits offerts à l'inscription (100 crédits)
-- Achat de packs de crédits
-- Abonnements mensuels avec crédits inclus
+### ðŸ’Ž SystÃ¨me de CrÃ©dits
+- CrÃ©dits offerts Ã  l'inscription (100 crÃ©dits)
+- Achat de packs de crÃ©dits
+- Abonnements mensuels avec crÃ©dits inclus
 - Historique des transactions
 
-### 💳 Paiements
-- Intégration Stripe sécurisée
+### ðŸ’³ Paiements
+- IntÃ©gration Stripe sÃ©curisÃ©e
 - Paiements par carte bancaire
 - Gestion des abonnements
 - Webhooks pour synchronisation
 
-### 🔒 Sécurité
+### ðŸ”’ SÃ©curitÃ©
 - Authentification JWT
-- Clés API protégées côté serveur
+- ClÃ©s API protÃ©gÃ©es cÃ´tÃ© serveur
 - Rate limiting
-- Validation des données
+- Validation des donnÃ©es
 
 ---
 
-## 🚀 Installation
+## ðŸš€ Installation
 
-### Prérequis
+### PrÃ©requis
 
 - Python 3.11+
 - Node.js 18+
-- PostgreSQL 15+ (optionnel, SQLite par défaut)
+- PostgreSQL 15+ (optionnel, SQLite par dÃ©faut)
 - Compte Stripe (pour les paiements)
-- Clé API Replicate (pour la génération AI)
+- ClÃ© API Replicate (pour la gÃ©nÃ©ration AI)
 
 ### Installation automatique
 
@@ -158,17 +158,17 @@ chmod +x install.sh
 ```bash
 cd backend
 
-# Créer l'environnement virtuel
+# CrÃ©er l'environnement virtuel
 python -m venv venv
 venv\Scripts\activate  # Windows
 source venv/bin/activate  # Linux/Mac
 
-# Installer les dépendances
+# Installer les dÃ©pendances
 pip install -r requirements.txt
 
 # Configuration
 cp .env.example .env
-# Éditer .env avec vos clés API
+# Ã‰diter .env avec vos clÃ©s API
 
 # Lancer le serveur
 uvicorn main:app --reload
@@ -197,78 +197,78 @@ npm install
 
 # Configuration
 cp .env.example .env.local
-# Éditer .env.local
+# Ã‰diter .env.local
 
-# Lancer le serveur de développement
+# Lancer le serveur de dÃ©veloppement
 npm run dev
 ```
 
-### Build Exécutable Windows
+### Build ExÃ©cutable Windows
 
 ```bash
 cd desktop
 pyinstaller build.spec
 ```
 
-L'exécutable sera créé dans `dist/AI Studio Pro.exe`
+L'exÃ©cutable sera crÃ©Ã© dans `dist/AI Studio Pro.exe`
 
 ---
 
-## 📁 Structure du projet
+## ðŸ“ Structure du projet
 
 ```
 ai_studio_pro/
-├── 📁 backend/                    # Backend FastAPI
-│   ├── app/
-│   │   ├── core/                 # Configuration, sécurité
-│   │   ├── models/               # Modèles SQLAlchemy
-│   │   ├── schemas/              # Modèles Pydantic
-│   │   ├── services/             # Logique métier
-│   │   └── api/v1/endpoints/     # Routes API
-│   ├── main.py
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── docker-compose.yml
-│
-├── 📁 desktop/                    # Application Desktop PySide6
-│   ├── src/
-│   │   ├── core/                 # Configuration, thèmes
-│   │   ├── api/                  # Client HTTP
-│   │   └── ui/                   # Interface utilisateur
-│   ├── main.py
-│   ├── build.spec
-│   └── requirements.txt
-│
-├── 📁 webapp/                     # Application Web React/Next.js
-│   ├── src/
-│   │   ├── app/                  # Routes Next.js
-│   │   ├── components/           # Composants React
-│   │   ├── hooks/                # Hooks personnalisés
-│   │   ├── lib/                  # Utilitaires
-│   │   ├── store/                # État global (Zustand)
-│   │   └── types/                # Types TypeScript
-│   ├── package.json
-│   └── next.config.js
-│
-├── 📁 rapport_pfe/               # Rapport PFE
-│   └── Rapport_PFE_AI_Studio_Pro.docx
-│
-├── README.md
-├── install.bat / install.sh
-└── LICENSE
+â”œâ”€â”€ ðŸ“ backend/                    # Backend FastAPI
+â”‚   â”œâ”€â”€ app/
+â”‚   â”‚   â”œâ”€â”€ core/                 # Configuration, sÃ©curitÃ©
+â”‚   â”‚   â”œâ”€â”€ models/               # ModÃ¨les SQLAlchemy
+â”‚   â”‚   â”œâ”€â”€ schemas/              # ModÃ¨les Pydantic
+â”‚   â”‚   â”œâ”€â”€ services/             # Logique mÃ©tier
+â”‚   â”‚   â””â”€â”€ api/v1/endpoints/     # Routes API
+â”‚   â”œâ”€â”€ main.py
+â”‚   â”œâ”€â”€ requirements.txt
+â”‚   â”œâ”€â”€ Dockerfile
+â”‚   â””â”€â”€ docker-compose.yml
+â”‚
+â”œâ”€â”€ ðŸ“ desktop/                    # Application Desktop PySide6
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ core/                 # Configuration, thÃ¨mes
+â”‚   â”‚   â”œâ”€â”€ api/                  # Client HTTP
+â”‚   â”‚   â””â”€â”€ ui/                   # Interface utilisateur
+â”‚   â”œâ”€â”€ main.py
+â”‚   â”œâ”€â”€ build.spec
+â”‚   â””â”€â”€ requirements.txt
+â”‚
+â”œâ”€â”€ ðŸ“ webapp/                     # Application Web React/Next.js
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ app/                  # Routes Next.js
+â”‚   â”‚   â”œâ”€â”€ components/           # Composants React
+â”‚   â”‚   â”œâ”€â”€ hooks/                # Hooks personnalisÃ©s
+â”‚   â”‚   â”œâ”€â”€ lib/                  # Utilitaires
+â”‚   â”‚   â”œâ”€â”€ store/                # Ã‰tat global (Zustand)
+â”‚   â”‚   â””â”€â”€ types/                # Types TypeScript
+â”‚   â”œâ”€â”€ package.json
+â”‚   â””â”€â”€ next.config.js
+â”‚
+â”œâ”€â”€ ðŸ“ rapport_pfe/               # Rapport PFE
+â”‚   â””â”€â”€ Rapport_PFE_AI_Studio_Pro.docx
+â”‚
+â”œâ”€â”€ README.md
+â”œâ”€â”€ install.bat / install.sh
+â””â”€â”€ LICENSE
 ```
 
 ---
 
-## 🛠️ Technologies
+## ðŸ› ï¸ Technologies
 
 ### Backend
 - **FastAPI** - Framework web Python haute performance
-- **SQLAlchemy** - ORM pour bases de données
-- **PostgreSQL** - Base de données relationnelle
+- **SQLAlchemy** - ORM pour bases de donnÃ©es
+- **PostgreSQL** - Base de donnÃ©es relationnelle
 - **JWT** - Authentification par tokens
 - **Stripe** - Paiements en ligne
-- **Replicate API** - Génération d'images/vidéos AI
+- **Replicate API** - GÃ©nÃ©ration d'images/vidÃ©os AI
 
 ### Desktop
 - **PySide6** - Framework Qt pour Python
@@ -280,12 +280,12 @@ ai_studio_pro/
 - **TypeScript** - Typage statique
 - **Tailwind CSS** - Framework CSS utilitaire
 - **Radix UI** - Composants UI headless
-- **Zustand** - Gestion d'état
-- **TanStack Query** - Gestion des requêtes API
+- **Zustand** - Gestion d'Ã©tat
+- **TanStack Query** - Gestion des requÃªtes API
 
 ---
 
-## 📚 Documentation
+## ðŸ“š Documentation
 
 - [Rapport PFE](rapport_pfe/Rapport_PFE_AI_Studio_Pro.docx) - Document complet du projet
 - [Documentation Backend](backend/README.md)
@@ -294,39 +294,39 @@ ai_studio_pro/
 
 ---
 
-## 👤 Auteur
+## ðŸ‘¤ Auteur
 
-**Projet de Fin d'Études**
+**Projet de Fin d'Ã‰tudes**
 
-- Étudiant : [Nom de l'étudiant]
+- Ã‰tudiant : [Nom de l'Ã©tudiant]
 - Encadrant : [Nom de l'encadrant]
-- Université : [Nom de l'université]
-- Année universitaire : 2024-2025
+- UniversitÃ© : [Nom de l'universitÃ©]
+- AnnÃ©e universitaire : 2024-2025
 
 ---
 
-## 📄 Licence
+## ðŸ“„ Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de dÃ©tails.
 
 ---
 
-## 🙏 Remerciements
+## ðŸ™ Remerciements
 
-- Replicate pour l'API de génération AI
+- Replicate pour l'API de gÃ©nÃ©ration AI
 - Stripe pour les services de paiement
-- La communauté open source pour les outils utilisés
+- La communautÃ© open source pour les outils utilisÃ©s
 
 ---
 
 <p align="center">
-  <strong>AI Studio Pro</strong> - Libérez votre créativité avec l'IA
+  <strong>AI Studio Pro</strong> - LibÃ©rez votre crÃ©ativitÃ© avec l'IA
 </p>
 
 
 ## Database
 
-![ER Diagram](assets/er_diagram.png)
+![Studio Pro Workspace](assets/studio-pro-workspace-logo-master.png)
 
 ## Tests (Backend)
 
@@ -341,3 +341,4 @@ pytest -q
 - `docs/API_REFERENCE.md`
 - `docs/DB_SCHEMA.md`
 - `docs/PROD_CHECKLIST.md`
+
